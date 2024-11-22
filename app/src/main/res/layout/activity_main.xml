@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#060C79"
+        android:paddingTop="12dp"
+        android:padding="8dp"
+        app:title="Dicas Ecológicas"
+        app:titleTextColor="#f5f5f5"
+        android:elevation="4dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Breno Tosi - 93435"
+        android:textSize="18sp"
+        android:textColor="#060C79"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_marginVertical="10dp"
+        />
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Pesquisar..."
+        android:iconifiedByDefault="false"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="8dp"
+        app:queryBackground="?android:attr/windowBackground"
+        app:iconifiedByDefault="false"
+        />
+
+    <EditText
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:paddingVertical="16dp"
+        android:textSize="16sp"
+        android:hint="Titulo"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingVertical="16dp"
+        android:hint="Descrição"
+        android:inputType="text"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Inserir"
+        android:textColor="#f5f5f5"
+        android:background="#060C79"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        tools:listitem="@layout/item_dica"
+        android:paddingBottom="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+
+</LinearLayout>
